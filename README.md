@@ -20,7 +20,7 @@ The Frog must explore the map, find TNT and a Detonator, avoid obstacles, and dr
 
 ## Technologies Used
 
-- Java 21
+- Java 21 & Java FX 
 - IntelliJ IDEA Ultimate Edition
 - SaSaCommunicator Java Library (provided)
 - JDBC (for database handling)
