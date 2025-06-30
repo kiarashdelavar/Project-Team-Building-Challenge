@@ -30,25 +30,57 @@ The Frog must explore the map, find TNT and a Detonator, avoid obstacles, and dr
 ## Project Structure
 
 ```plaintext
-02 [Newprojectfrog]/
-├── .idea/                     # IntelliJ project settings
-├── .mvn/                      # Maven wrapper files
-├── doc/                       # Project documentation (optional)
-├── lib/                       # SaSaCommunicator library (provided)
-├── resources/                 # Protocol docs and asteroid map
+FrogUpdated/
+├── .idea/                         # IntelliJ project settings
+├── .mvn/                          # Maven wrapper files
+├── doc/                           # Project documentation
+├── lib/                           # External libraries (e.g., SaSaCommunicator)
+├── resources/                     # General resources
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── nl.saxion.ptbc/        # Main Java package (Pilot code)
-│       │       └── module-info.java   # Java module declaration
-│       └── resources/                 # Additional runtime resources
-├── target/                    # Maven build output (auto-generated)
-├── .gitignore                 # Git ignore rules
-├── pom.xml                    # Maven project descriptor
-├── sasa.db                    # SQLite database (mission log)
-├── obstacles.db-journal       # SQLite journal file
-├── mvnw / mvnw.cmd            # Maven wrapper scripts
-└── README.md                  # Project overview and documentation
+│       │   └── nl.saxion.ptbc/
+│       │       ├── classes/
+│       │       │   ├── Frog.java
+│       │       │   ├── Location.java
+│       │       │   ├── Map.java
+│       │       │   ├── Obstacle.java
+│       │       │   └── RadarPoint.java
+│       │       ├── CSVLoader/
+│       │       │   ├── CSVLoaderController.java
+│       │       │   └── CSVLoaderException.java
+│       │       ├── database/
+│       │       │   ├── ObstacleDatabaseHandler.java
+│       │       │   ├── SQLiteConnection.java
+│       │       │   ├── SQLiteCreateTable.java
+│       │       │   ├── SQLiteDropTable.java
+│       │       │   ├── SQLiteInsertInTable.java
+│       │       │   └── SQLiteSelectTable.java
+│       │       ├── frog/
+│       │       │   └── StartFrogApp.java
+│       │       ├── groundControl/
+│       │       │   ├── GroundControlApp.java
+│       │       │   ├── GroundControlController.java
+│       │       │   └── GroundControlUtils.java
+│       │       ├── missionLog/
+│       │       │   ├── MissionLog.java
+│       │       │   ├── MissionLogController.java
+│       │       │   ├── MissionLogDAO.java
+│       │       │   ├── MissionStatus.java
+│       │       │   └── ReplayMission.java
+│       │       ├── pilot/
+│       │       │   ├── PilotApp.java
+│       │       │   ├── RadarSystem.java
+│       │       │   └── RadarView.java
+│       │       └── module-info.java
+│       └── resources/             # Application-specific resources
+├── target/                        # Maven build output
+├── .gitignore                     # Git ignored files
+├── mvnw / mvnw.cmd                # Maven wrapper scripts
+├── pom.xml                        # Maven project descriptor
+├── sasa.db                        # SQLite database file
+├── obstacles.db-journal           # SQLite journal (auto-generated)
+└── README.md                      # Project documentation
 
 ```
 
