@@ -29,6 +29,7 @@ The Frog must explore the map, find TNT and a Detonator, avoid obstacles, and dr
 
 ## Project Structure
 
+```plaintext
 02 [Newprojectfrog]/
 ├── .idea/                     # IntelliJ project settings
 ├── .mvn/                      # Maven wrapper files
@@ -38,9 +39,9 @@ The Frog must explore the map, find TNT and a Detonator, avoid obstacles, and dr
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── nl.saxion.ptbc/       # Main Java package (Pilot code)
-│       │       └── module-info.java  # Java module declaration
-│       └── resources/                # Additional runtime resources
+│       │   └── nl.saxion.ptbc/        # Main Java package (Pilot code)
+│       │       └── module-info.java   # Java module declaration
+│       └── resources/                 # Additional runtime resources
 ├── target/                    # Maven build output (auto-generated)
 ├── .gitignore                 # Git ignore rules
 ├── pom.xml                    # Maven project descriptor
@@ -49,6 +50,7 @@ The Frog must explore the map, find TNT and a Detonator, avoid obstacles, and dr
 ├── mvnw / mvnw.cmd            # Maven wrapper scripts
 └── README.md                  # Project overview and documentation
 
+```
 
 
 
