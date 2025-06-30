@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="763.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.ptbc.groundControl.GroundControlController">
+    <children>
+        <Button fx:id="btnLoadMission" layoutX="26.0" layoutY="135.0" mnemonicParsing="false" onAction="#OnLoadMission" text="Load Mission Log">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <padding>
+                <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnExportCollectedCollisionPoints" layoutX="25.0" layoutY="395.0" mnemonicParsing="false" onAction="#OnExportCollectedCollisionPoints" text="Export Collected Collision Points">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <padding>
+                <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnImportCollectedCollisionPoints" layoutX="25.0" layoutY="523.0" mnemonicParsing="false" onAction="#OnImportCollectedCollisionPoints" text="Import Collected Collision Points">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <padding>
+                <Insets bottom="20.0" left="14.0" right="14.0" top="20.0" />
+            </padding>
+        </Button>
+        <Label layoutX="302.0" layoutY="14.0" text="The Ground Control">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="locationLabel" layoutX="416.0" layoutY="73.0" text="Location :">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <HBox layoutX="200.0" layoutY="73.0" spacing="5">
+            <Label fx:id="batteryLabel" text="Battery:" />
+            <TextField fx:id="batteryText" editable="false" prefWidth="60.0" />
+            <Label text="Solar:" />
+            <TextField fx:id="solarText" editable="false" prefWidth="60.0" />
+        </HBox>
+        <Label fx:id="targetLabel" layoutX="623.0" layoutY="73.0" text="Target :">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="status" layoutX="26.0" layoutY="73.0" text="Status :">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="43.0" fitWidth="38.0" layoutX="256.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Screenshot%202025-05-08%20144532.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="21.0" layoutY="616.0" text="Mission Status &amp; Navigation Information :">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="missionStatusNavigationInfo" layoutX="21.0" layoutY="648.0" prefHeight="83.0" prefWidth="755.0" />
+        <Pane fx:id="mapPane" layoutX="275.0" layoutY="109.0" onMouseClicked="#OnMapClicked" prefHeight="500.0" prefWidth="500.0">
+            <children>
+                <ImageView fx:id="map" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Map.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+      <Button fx:id="btnStopAutoDrive" layoutX="25.0" layoutY="264.0" mnemonicParsing="false" onAction="#OnStopAutoDrive" prefHeight="60.0" prefWidth="229.0" text="Stop AutoDrive">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
